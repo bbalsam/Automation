@@ -62,7 +62,6 @@ for row in table.tbody.find_all('tr'):
 			crsr.execute("""INSERT INTO dbo.IndexStocks (Symbol,Security,SEC_Filings,GICS_Sector,GICS_Sub_Industry,HQ_Location,Date_First_Added,CIK,Founded,ID) VALUES ('"""+symbol+"""','"""+security+"""','"""+filings+"""','"""+sector+"""','"""+industry+"""','"""+location+"""',"""+added+""",'"""+cik+"""','"""+founded+"""','"""+id+"""')""")
 			conn.commit()
 		except Exception as e:
-			print("""INSERT INTO dbo.IndexStocks (Symbol,Security,SEC_Filings,GICS_Sector,GICS_Sub_Industry,HQ_Location,Date_First_Added,CIK,Founded,ID) VALUES ('"""+symbol+"""','"""+security+"""','"""+filings+"""','"""+sector+"""','"""+industry+"""','"""+location+"""',"""+added+""",'"""+cik+"""','"""+founded+"""','"""+id+"""')""")
 			print(str(e))
 			
 
